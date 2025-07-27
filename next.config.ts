@@ -1,16 +1,9 @@
-import type { NextConfig } from "next";
-
-// next.config.js
 /** @type {import('next').NextConfig} */
-const nextConfig : NextConfig = {
+const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // required if you're using <Image>
+    unoptimized: true,
   },
-  basePath: '/records-request',
-  assetPrefix: '/records-request',
 };
 
 module.exports = nextConfig;
-
-export default nextConfig;
