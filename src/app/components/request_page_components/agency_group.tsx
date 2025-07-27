@@ -97,7 +97,6 @@ const GroupTreeNode: React.FC<{
 			/>
 		);
 	}
-	console.log(group.children);
 
 	if (isRoot) {
 		return (

@@ -51,7 +51,6 @@ export async function loadRecordsAgencies(): Promise<Agency[]> {
     if (a.system !== b.system) return a.system.localeCompare(b.system);
     return a.full_name.localeCompare(b.full_name);
   });
-  console.log("Sorted agencies:", sorted);
 
   return sorted;
 }
