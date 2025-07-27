@@ -1,103 +1,235 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import React, { useState, useEffect, useRef } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+import RequestHome from "@/app/components/request_home";
+import SendHome from "@/app/components/send_home";
+import Cookies from "js-cookie";
+
+import {
+	Agency,
+	State,
+	UserInfo,
+	generateMailtoLink,
+	getStateForAgency,
+} from "@/app/util/agency_util";
+import { loadStateInfo, loadRecordsAgencies } from "@/app/util/load_util";
+
+import {
+	processRequestText,
+	replaceTemplatedText,
+} from "@/app/util/request_text";
+import { Button } from "react-bootstrap";
+import Settings from "./components/settings";
+
+const USER_INFO_COOKIE = "user_info";
+
+export default function HomePage() {
+	const [userInfo, setUserInfo] = useState<UserInfo>({
+		name: "",
+		organization: "",
+		email: "",
+		phone: "",
+		address: "",
+	});
+	const [agencies, setAgencies] = useState<Agency[]>([]);
+	const [selectedAgencies, setSelectedAgencies] = useState<Agency[]>([]);
+	const [stateInfo, setStateInfo] = useState<State[]>([]);
+	const [sentAgencies, setSentAgencies] = useState<number[]>([]);
+	const [currentAgencyIndex, setCurrentAgencyIndex] = useState(0);
+	const [requestText, setRequestText] = useState("");
+	const [showMailLinks, setShowMailLinks] = useState(false);
+	const [errorModal, setErrorModal] = useState(false);
+	const [showSettings, setShowSettings] = useState(false);
+	const [emailToLine, setEmailToLine] = useState("");
+	const [emailSubjectLine, setEmailSubjectLine] = useState("");
+	const [emailBody, setEmailBody] = useState("");
+	const [isEmail, setIsEmail] = useState(true);
+
+	useEffect(() => {
+		const cookieValue = Cookies.get(USER_INFO_COOKIE);
+		if (cookieValue) {
+			try {
+				const parsed = JSON.parse(cookieValue);
+				setUserInfo(parsed);
+			} catch (e) {
+				console.error("Failed to parse userInfo cookie", e);
+			}
+		}
+	}, []);
+
+	// Save to cookie whenever userInfo changes
+	useEffect(() => {
+		Cookies.set(USER_INFO_COOKIE, JSON.stringify(userInfo), {
+			expires: 365,
+		});
+	}, [userInfo]);
+
+	useEffect(() => {
+		loadStateInfo().then(setStateInfo);
+		loadRecordsAgencies().then(setAgencies);
+	}, []);
+
+	useEffect(() => {
+		if (selectedAgencies.length === 0) return;
+		if (currentAgencyIndex >= selectedAgencies.length) return;
+
+		const agency = selectedAgencies[currentAgencyIndex];
+		setIsEmail(agency.accepts_email);
+	}, [currentAgencyIndex, selectedAgencies]);
+
+	useEffect(() => {
+		if (selectedAgencies.length === 0) return;
+		if (currentAgencyIndex >= selectedAgencies.length) return;
+		const currentAgency = selectedAgencies[currentAgencyIndex];
+		const currentState = getStateForAgency(currentAgency, stateInfo);
+		setEmailToLine(currentAgency.accepts_email ? currentAgency.email : "");
+		setEmailSubjectLine(
+			replaceTemplatedText(
+				"{{state_foia_law}} Request",
+				userInfo,
+				currentAgency,
+				currentState
+			)
+		);
+		processRequestText(
+			requestText,
+			userInfo,
+			currentAgency,
+			currentState
+		).then((completedTemplate) => {
+			setEmailBody(completedTemplate);
+		});
+	}, [
+		currentAgencyIndex,
+		selectedAgencies,
+		userInfo,
+		stateInfo,
+		requestText,
+	]);
+
+	useEffect(() => {
+		setSelectedAgencies((prev) =>
+			[...prev].sort((a, b) => {
+				if (a.accepts_email !== b.accepts_email) {
+					return a.accepts_email ? -1 : 1;
+				}
+				if (a.system !== b.system) {
+					return a.system.localeCompare(b.system);
+				}
+				return a.full_name.localeCompare(b.full_name);
+			})
+		);
+	}, [selectedAgencies.length]);
+
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+		if (selectedAgencies.length === 0) {
+			setErrorModal(true);
+			return;
+		}
+
+		setShowMailLinks(true);
+		setSentAgencies([]);
+	};
+
+	const handleEdit = (e: React.FormEvent) => {
+		e.preventDefault();
+		setShowMailLinks(false);
+		setSentAgencies([]);
+		setCurrentAgencyIndex(0);
+	};
+
+	const sendRequest = () => {
+		if (isEmail) {
+			const mailToLink = generateMailtoLink(
+				selectedAgencies[currentAgencyIndex],
+				emailSubjectLine,
+				emailBody
+			);
+
+			window.location.href = mailToLink;
+		} else {
+			const agency = selectedAgencies[currentAgencyIndex];
+			if (agency?.website) {
+				window.open(agency.website, "_blank");
+			} else {
+				alert("No website available for this agency.");
+			}
+		}
+		setSentAgencies((prev) =>
+			prev.includes(currentAgencyIndex)
+				? prev
+				: [...prev, currentAgencyIndex]
+		);
+	};
+
+	const startIndexRef = useRef(currentAgencyIndex);
+
+	useEffect(() => {
+		if (sentAgencies.length === selectedAgencies.length) return;
+
+		const total = selectedAgencies.length;
+		const start = startIndexRef.current % total;
+
+		for (let offset = 0; offset < total; offset++) {
+			const i = (start + offset) % total;
+			if (!sentAgencies.includes(i)) {
+				setCurrentAgencyIndex(i);
+				startIndexRef.current = i + 1; // increment starting point for next time
+				break;
+			}
+		}
+	}, [sentAgencies, selectedAgencies]);
+
+	return (
+		<div>
+			<div className="position-relative">
+				<Button
+					variant="secondary"
+					size="sm"
+					className="position-absolute top-0 end-0 d-flex align-items-center justify-content-center"
+					onClick={() => setShowSettings(true)}
+				>
+					<i className="bi bi-gear-fill"></i>
+				</Button>
+			</div>
+			<Settings
+				showSettings={showSettings}
+				setShowSettings={setShowSettings}
+				user_info={userInfo}
+				setUserInfo={setUserInfo}
+			/>
+
+			{!showMailLinks && (
+				<RequestHome
+					agencies={agencies}
+					selectedAgencies={selectedAgencies}
+					setSelectedAgencies={setSelectedAgencies}
+					requestText={requestText}
+					setRequestText={setRequestText}
+					errorModal={errorModal}
+					setErrorModal={setErrorModal}
+					handleSubmit={handleSubmit}
+				/>
+			)}
+			{showMailLinks && (
+				<SendHome
+					selectedAgencies={selectedAgencies}
+					currentAgencyIndex={currentAgencyIndex}
+					setCurrentAgencyIndex={setCurrentAgencyIndex}
+					emailToLine={emailToLine}
+					emailSubjectLine={emailSubjectLine}
+					emailBody={emailBody}
+					setEmailBody={setEmailBody}
+					sentAgencies={sentAgencies}
+					sendRequest={sendRequest}
+					handleEdit={handleEdit}
+					isEmail={isEmail}
+				/>
+			)}
+		</div>
+	);
 }

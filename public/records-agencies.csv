@@ -1,0 +1,204 @@
+full_name,short_name,system,state,accepts_email,email,website,had_encampment,has_sjp,sjp_name,chancellor_name,has_police,police_chief,term,has_undergraduate,is_system
+"University of California, Office of the President",UCOP,University of California,California,TRUE,pra@ucop.edu,,TRUE,TRUE,SJP,President Michael Drake,TRUE,Jody Stiger,,FALSE,TRUE
+"University of California, Davis",UCD,University of California,California,TRUE,publicrecords@ucdavis.edu,,TRUE,TRUE,SJP,Chancellor Gary May,TRUE,Joe Farrow,Quarter,TRUE,FALSE
+"University of California, Berkeley",UCB,University of California,California,TRUE,pra@berkeley.edu,,TRUE,TRUE,SJP,Chancellor Rich Lyons,TRUE,Yogananda Pittman,Semester,TRUE,FALSE
+"University of California, Los Angeles",UCLA,University of California,California,TRUE,records@ucla.edu,,TRUE,TRUE,SJP,Chancellor Julio Frenk,TRUE,Scott Scheffler,Quarter,TRUE,FALSE
+"University of California, San Diego",UCSD,University of California,California,FALSE,,https://ucsd.govqa.us/WEBAPP/_rs/(S(cutolcqc5mqq3dvvtyjp1n3p))/RequestLogin.aspx,TRUE,TRUE,SJP,Chancellor Pradeep Khosla,TRUE,Lamine Secka,Quarter,TRUE,FALSE
+"University of California, Irvine",UCI,University of California,California,TRUE,pra@uci.edu,,TRUE,TRUE,SJP,Chancellor Howard Gillman,TRUE,Elizabeth Griffin,Quarter,TRUE,FALSE
+"University of California, Santa Barbara",UCSB,University of California,California,TRUE,pra@campuscounsel.ucsb.edu,,TRUE,TRUE,SJP,Chancellor Henry Yang,TRUE,Alex Yao,Quarter,TRUE,FALSE
+"University of California, Santa Cruz",UCSC,University of California,California,TRUE,pra@ucsc.edu,,TRUE,TRUE,SJP,Chancellor Cynthia Larive,TRUE,Kevin Domby,Quarter,TRUE,FALSE
+"University of California, San Francisco",UCSF,University of California,California,TRUE,cpra@ucsf.edu,,TRUE,TRUE,SJP,Chancellor Sam Hawgood,TRUE,Mike Denson,Quarter,FALSE,FALSE
+"University of California, Riverside",UCR,University of California,California,TRUE,publicrecords@ucr.edu,,TRUE,TRUE,SJP,Chancellor Kim Wilcox,TRUE,Jeffrey Talbott,Quarter,TRUE,FALSE
+"University of California, Merced",UCM,University of California,California,TRUE,publicrecords@ucmerced.edu,,TRUE,TRUE,SJP,Chancellor Juan Munoz,TRUE,Chou Her,Semester,TRUE,FALSE
+"University of California, Agriculture and Natural Resources",UCANR,University of California,California,TRUE,rgsanchez@ucanr.edu,,FALSE,FALSE,,,FALSE,,,FALSE,FALSE
+Lawrence Berkeley National Labs,LBNL,University of California,California,TRUE,azulkowski@lbl.gov,,FALSE,FALSE,,,FALSE,,,FALSE,FALSE
+"California State University, Office of the Chancellor",CSUOC,California State University,California,TRUE,co-pra@calstate.edu,,TRUE,TRUE,SJP,Chancellor Mildred Garcia,TRUE,Melinda Latas,,FALSE,TRUE
+"California State University, Bakersfield",CSUB,California State University,California,TRUE,publicrecordsrequest@csub.edu,,TRUE,TRUE,SJP,President Vernon Harper,TRUE,Maricela Gonzalez,Semester,TRUE,FALSE
+"California State University, Channel Islands",CSUCI,California State University,California,FALSE,csuci@hello.edu,,TRUE,TRUE,SJP,President Richard Yao,TRUE,Drake Massey,Semester,TRUE,FALSE
+Chico State University,CSUChico,California State University,California,TRUE,pra@csuchico.edu,,FALSE,TRUE,SJP,President Steve Perez,TRUE,Chris Nicodemus,Semester,TRUE,FALSE
+"California State University, Dominguez Hills",CSUDH,California State University,California,FALSE,,https://forms.office.com/pages/responsepage.aspx?id=J6dmGolzJ0eoy_JJrI5_-MfmcR8t3ddCiw4cZoQ92M1UMTE1N1NQWFFDSlQ3OFQ4RE81M0JBQzdQMy4u,FALSE,TRUE,SJP,President Thomas Parham,TRUE,Carlos Velez,Semester,TRUE,FALSE
+"California State University, East Bay",CSUEB,California State University,California,TRUE,recordsrequest@csueastbay.edu,,FALSE,FALSE,,President Cathy Sandeen,TRUE,Omar Miakhail,Semester,TRUE,FALSE
+Fresno State University,CSUFresno,California State University,California,TRUE,estherg@csufresno.edu,,TRUE,TRUE,SPL,President Saul Sandoval,TRUE,Anthony Martinez,Semester,TRUE,FALSE
+"California State University, Fullerton",CSUF,California State University,California,TRUE,publicrecord@fullerton.edu,,TRUE,TRUE,SJP,President Ronald Rochon,TRUE,Anthony Frisbee,Semester,TRUE,FALSE
+Cal Poly Humboldt,CalPolyHumboldt,California State University,California,TRUE,publicrecordsrequest@humboldt.edu,,TRUE,FALSE,,President Michael Spagna,TRUE,Greg Allen,Semester,TRUE,FALSE
+"California State University, Long Beach",CSULB,California State University,California,TRUE,publicrecords@csulb.edu,,TRUE,TRUE,SJP,President Jane Conoley,TRUE,John Brockie,Semester,TRUE,FALSE
+"California State University, Los Angeles",CSULA,California State University,California,TRUE,pra@calstatela.edu,,TRUE,TRUE,SJP,President Berenecea Johnson,TRUE,Larry Bohannon,Semester,TRUE,FALSE
+"California State University, Monterey Bay",CSUMB,California State University,California,TRUE,pra@csumb.edu,,TRUE,TRUE,SJP,President Vanya Quinones,TRUE,Yvonne Gordon,Semester,TRUE,FALSE
+"California State University, Northridge",CSUN,California State University,California,TRUE,pra@csun.edu,,TRUE,TRUE,SJP,President Erika Beck,TRUE,Alfredo Fernandez,Semester,TRUE,FALSE
+Cal Poly Pomona,CalPolyPomona,California State University,California,TRUE,publicrecords@cpp.edu,,TRUE,TRUE,SJP,President Soraya,TRUE,Linh Dinh,Semester,TRUE,FALSE
+Sacramento State University,CSUS,California State University,California,TRUE,csus@hello.edu,,TRUE,TRUE,SJP,President Luke Wood,TRUE,Chet Madison,Semester,TRUE,FALSE
+"California State University, San Bernardino",CSUSB,California State University,California,TRUE,public.records@csusb.edu,,TRUE,TRUE,SJP,President Tomas Morales,TRUE,John Guttierez,Semester,TRUE,FALSE
+San Diego State University,SDSU,California State University,California,TRUE,jvictorio@sdsu.edu,,TRUE,TRUE,SJP,President Adela de la Torre,TRUE,Gregory Murphy,Semester,TRUE,FALSE
+San Francisco State University,SFSU,California State University,California,TRUE,sfstatepra@sfsu.edu,,TRUE,TRUE,SJP,President Lynn Mahoney,TRUE,Reggie Parson,Semester,TRUE,FALSE
+San Jose State University,SJSU,California State University,California,TRUE,publicrecordsrequests@sjsu.edu,,TRUE,TRUE,SJP,President Cynthia Teniente-Matson,TRUE,Michael Carroll,Semester,TRUE,FALSE
+Cal Poly San Luis Obispo,CalPolySLO,California State University,California,TRUE,pra@calpoly.edu,,TRUE,TRUE,SJP,President Jeffrey Armstrong,TRUE,Rob Plastine,Semester,TRUE,FALSE
+"California State University, San Marcos",CSUSM,California State University,California,TRUE,cbebee@csusm.edu,,TRUE,TRUE,SJP,President Ellen Neufeldt,TRUE,Jesse Flores,Semester,TRUE,FALSE
+Sonoma State University,CSUSonoma,California State University,California,TRUE,pra@sonoma.edu,,TRUE,TRUE,SJP,President Emily Cutrer,TRUE,Nader Oweis,Semester,TRUE,FALSE
+"California State University, Stanislaus",CSUStanislaus,California State University,California,TRUE,pra@csustan.edu,,TRUE,TRUE,SJP,President Britt Rios-Ellis,TRUE,Steve Olson,Semester,TRUE,FALSE
+Central Michigan University,CMich,,Michigan,TRUE,foiarequest@cmich.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Eastern Michigan University,EMich,,Michigan,TRUE,foia.coordinator@emich.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Michigan State University,MSU,,Michigan,TRUE,foia@msu.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Oakland University,Oakland,,Michigan,TRUE,FOIA@oakland.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+University of Michigan,UMich,University of Michigan,Michigan,TRUE,foia-email@umich.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Wayne State University,WSU,,Michigan,TRUE,foia@wayne.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Western Michigan University,WMich,,Michigan,TRUE,foia-officer@wmich.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Binghamton University,Binghamton,SUNY,New York,TRUE,mtanzini@binghamton.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Cornell University,Cornell,SUNY,New York,TRUE,publicrecords@cornell.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+New York State College of Ceramics at Alfred University,Alfred,SUNY,New York,TRUE,lloydgm@alfred.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+SUNY College of Environmental Science and Forestry,ESF,SUNY,New York,TRUE,FOILrequests@esf.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Stony Brook University,Stony Brook,SUNY,New York,TRUE,recordsaccessofficer@stonybrook.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+SUNY Polytechnic Institute,SUNY Poly,SUNY,New York,TRUE,sargend@sunypoly.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+University at Albany,Albany,SUNY,New York,TRUE,FOIL@albany.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+University at Buffalo,Buffalo,SUNY,New York,TRUE,UBFOIL@buffalo.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+SUNY System Administration,SUNY,SUNY,New York,TRUE,FOIL@suny.edu,,FALSE,,,,,,,TRUE,TRUE
+Baruch College,Baruch,CUNY,New York,TRUE,olga.dais@baruch.cuny.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Brooklyn College,Brooklyn,CUNY,New York,TRUE,jaclyn.helms@brooklyn.cuny.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+City College of New York,CCNY,CUNY,New York,TRUE,pocchiogrosso@ccny.cuny.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+College of Staten Island,CSI,CUNY,New York,TRUE,Catherine.Ferrara@csi.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Hunter College,Hunter,CUNY,New York,TRUE,legal@hunter.cuny.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+John Jay College of Criminal Justice,John Jay,CUNY,New York,TRUE,LegalCounsel@jjay.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Lehman College,Lehman,CUNY,New York,TRUE,Bridget.Barbera@lehman.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Medgar Evers College,MEC,CUNY,New York,TRUE,FOILRequest@mec.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+New York City College of Technology,City Tech,CUNY,New York,TRUE,kmraymond@citytech.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Queens College,QC,CUNY,New York,TRUE,Dennis.Cohen@qc.cuny.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+York College,York,CUNY,New York,TRUE,rplatzek@york.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+CUNY Graduate Center,CUNY GC,CUNY,New York,TRUE,KMcBryan@gc.cuny.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+CUNY Graduate School of Public Health and Health Policy,CUNY Public Health,CUNY,New York,TRUE,donna.canfield@cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Craig Newmark Graduate School of Journalism at CUNY,CUNY Journalism,CUNY,New York,TRUE,richard.white@cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+CUNY School of Law,CUNY LAW,CUNY,New York,TRUE,Taejong.kim@law.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+CUNY School of Professional Studies,CUNY Professional Studies,CUNY,New York,TRUE,donna.canfield@cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Macaulay Honors College,Macaulay,CUNY,New York,TRUE,foilrequests@mhc.cuny.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+CUNY Central Office,CUNY,CUNY,New York,TRUE,CUNY.RecordsOfficer@cuny.edu,,TRUE,,,,,,,FALSE,TRUE
+East Texas A&M University,ETAMU,Texas A&M,Texas,TRUE,PublicInformationRequest@etamu.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Prairie View A&M University,PVAMU,Texas A&M,Texas,TRUE,openrecords@pvamu.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Tarleton State University,Tarleton,Texas A&M,Texas,TRUE,openrecords@tarleton.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Texas A&M International University,TAMIU,Texas A&M,Texas,TRUE,recordsmanagement@tamiu.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Texas A&M University,TAMU,Texas A&M,Texas,TRUE,open-records@tamu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"Texas A&M University, Central Texas",TAMU Central Texas,Texas A&M,Texas,TRUE,compliance@tamuct.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+"Texas A&M University, Corpus Christi",TAMU Corpus Christi,Texas A&M,Texas,TRUE,openrecords@tamucc.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"Texas A&M University, Kingsville",TAMU Kingsville,Texas A&M,Texas,TRUE,publicinformation@tamuk.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+"Texas A&M University, San Antonio",TAMU San Antonio,Texas A&M,Texas,TRUE,AM-SAPublic.InformationRequests@tamusa.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+"Texas A&M University, Texarkana",TAMU Texarkana,Texas A&M,Texas,TRUE,public.info@tamut.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+West Texas A&M University,WTAMU,Texas A&M,Texas,TRUE,openrecords@wtamu.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Texas A&M University System,TAMU System,Texas A&M,Texas,TRUE,openrecords@tamus.edu,,TRUE,,,,,,,FALSE,TRUE
+Lamar University,Lamar,Texas State University,Texas,TRUE,openrecords@lamar.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Sam Houston State University,SHSU,Texas State University,Texas,TRUE,openrecords@shsu.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Sul Ross State University,Sul Ross State,Texas State University,Texas,TRUE,openrecords@sulross.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Texas State University,Tx State,Texas State University,Texas,TRUE,TSUSGenCoun@txstate.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Texas State University System,TSU System,Texas State University,Texas,TRUE,openrecords@tsus.edu,,TRUE,,,,,,,TRUE,TRUE
+University of Houston,UH,University of Houston,Texas,TRUE,publicinfo@uh.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of North Texas,UNT,University of North Texas,Texas,TRUE,publicinformation@untsystem.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Texas at Arlington,UT Arlington,University of Texas,Texas,FALSE,,https://utaedu.justfoia.com/publicportal/home/track,TRUE,,,,,,Semester,TRUE,FALSE
+University of Texas at Austin,UT Austin,University of Texas,Texas,FALSE,,https://utexas.mycusthelp.com/WEBAPP/_rs/(S(tix4rsq0fezffywwckkk53mx))/supporthome.aspx,TRUE,,,,,,Semester,TRUE,FALSE
+University of Texas at Dallas,UT Dallas,University of Texas,Texas,TRUE,publicinformation@utdallas.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Texas at El Paso,UT El Paso,University of Texas,Texas,TRUE,tpia@utep.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+University of Texas at San Antonio,UT San Antonio,University of Texas,Texas,TRUE,PublicInfo@utsa.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Texas at Tyler,UT Tyler,University of Texas,Texas,TRUE,publicinfo@uthct.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+University of Texas Permian Basin,UT Permian Basin,University of Texas,Texas,TRUE,publicinformation@utpb.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+University of Texas Rio Grande Valley,UT Rio Grande,University of Texas,Texas,TRUE,publicinformation@utrgv.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+Stephen F. Austin State University,SFASU,University of Texas,Texas,TRUE,ogc@sfasu.edu,,FALSE,,,,,,Semester,TRUE,FALSE
+University of Texas System,UT,University of Texas,Texas,TRUE,publicinformation@utsystem.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Oregon,UO,,Oregon,TRUE,pubrec@uoregon.edu,,TRUE,,,,,,Quarter,TRUE,FALSE
+Portland State University,PSU,,Oregon,TRUE,publicrecords@pdx.edu,,TRUE,,,,,,Quarter,TRUE,FALSE
+Oregon State University,OSU,,Oregon,TRUE,publicrecords@oregonstate.edu,,TRUE,,,,,,Quarter,TRUE,FALSE
+University of Washington,UW,,Washington,TRUE,pubrec@uw.edu,,TRUE,,,,,,Quarter,TRUE,FALSE
+Washington State University,WSU,,Washington,TRUE,wsu.pubrecords@wsu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Western Washington University,WWU,,Washington,TRUE,drequests@wwu.edu,,FALSE,,,,,,Quarter,TRUE,FALSE
+Eastern Washington University,EWU,,Washington,FALSE,,https://inside.ewu.edu/rcp/pr/public-records/public-records-request-form/,TRUE,,,,,,Quarter,TRUE,FALSE
+Central Washington University,CWU,,Washington,TRUE,publicdisclosure@cwu.edu,,FALSE,,,,,,Quarter,TRUE,FALSE
+Evergreen State College,Evergreen State,,Washington,TRUE,publicrecords@evergreen.edu,,TRUE,,,,,,Quarter,TRUE,FALSE
+University of Arkansas,Arkansas,,Arkansas,FALSE,,https://publicinfo.uark.edu/public-records-and-information/foia-request.php,TRUE,,,,,,Semester,TRUE,FALSE
+University of Colorado System and Board of Regents,CU,University of Colorado,Colorado,TRUE,CORACUSystem@cu.edu,,TRUE,,,,,,,FALSE,TRUE
+"University of Colorado, Colorado Springs",UCCS,University of Colorado,Colorado,TRUE,CORAUCCS@uccs.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of California, Denver",UC Denver,University of Colorado,Colorado,TRUE,CORAUCD@ucdenver.edu,,TRUE,,,,,,Quarter,TRUE,FALSE
+Metropolitan State University,MSU Denver,,Colorado,TRUE,CORA_Request@msudenver.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Colorado, Boulder",CU Boulder,University of Colorado,Colorado,TRUE,CORACUBoulder@colorado.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Connecticut in Storrs,UConn,University of Connecticut,Connecticut,TRUE,publicrecords@uconn.edu,https://publicrecords.uconn.edu/make-a-request/,TRUE,,,,,,Semester,TRUE,FALSE
+Central Connecticut State University,CCSU,,Connecticut,FALSE,,https://forms.office.com/Pages/ResponsePage.aspx?id=cMUpI4C1I0KAO0J9gA6BtiWsw0mn9GlCvLyHhM_xJkJUMTZMSkk5TjYwVlpZODk3S0VRUElQQUlPRy4u,TRUE,,,,,,Semester,TRUE,FALSE
+University of Florida,UF,University of Florida,Florida,FALSE,,https://universityofflorida.mycusthelp.com/WEBAPP/_rs/(S(1xzeym0hu42nch2jyp0lspoy))/SupportHome.aspx?lp=2&sSessionID=,TRUE,,,,,,Semester,TRUE,FALSE
+University of Central Florida,UCF,,Florida,TRUE,gcounsel@ucf.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of South Florida,USF,,Florida,TRUE,usfpr@usf.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of North Florida,UNF,,Florida,TRUE,generalcounsel@unf.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Florida Atlantic University,FAU,,Florida,TRUE,publicrecords@fau.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Florida Gulf Coast University,FGCU,,Florida,TRUE,publicrecordsrequest@fgcu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+New College of Florida,NCF,,Florida,TRUE,generalcounsel@ncf.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Georgia Institute of Technology,Ga Tech,,Georgia,TRUE,openrecords@gatech.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Kennesaw State University,Kennesaw,,Georgia,TRUE,asklegal@kennesaw.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Georgia,UGA,,Georgia,TRUE,ugaopenrecordsrequest@uga.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Georgia Southern University,Georgia Southern,,Georgia,TRUE,ola@georgiasouthern.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Northern Illinois University,NIU,,Illinois,TRUE,foia@niu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Illinois, Urbana-Champaign",UIUC,,Illinois,TRUE,foia@uillinois.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Illinois State University,Illinois State,,Illinois,TRUE,PublicRecords@IllinoisState.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Southern Illinois University Carbondale,SIU,,Illinois,TRUE,foia@siu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Indiana University,IU,,Indiana,FALSE,,https://iuovpgc-fireform.eas.iu.edu/online/form/index/apra,TRUE,,,,,,Semester,TRUE,FALSE
+University of Southern Indiana,USI,,Indiana,FALSE,,https://cm.maxient.com/reportingform.php?UnivofSouthernIndiana&layout_id=12,TRUE,,,,,,Semester,TRUE,FALSE
+Iowa State University,Iowa State,,Iowa,TRUE,publicrecords@iastate.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Iowa,UIowa,,Iowa,TRUE,public-records@uiowa.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Wichita State University,Wichita State,,kansas,FALSE,,https://openrecords.wichita.edu/,TRUE,,,,,,Semester,TRUE,FALSE
+University of Kansas,UK,,kansas,FALSE,,https://openrecords-ku.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+Kansas State University,Kansas State,,kansas,TRUE,openrecords@k-state.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Kentucky,University of Kentucky,,kentucky,TRUE,ukopenrecords@uky.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Louisville,Louisville,,kentucky,TRUE,KORAREQ@louisville.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Louisiana State University,LSU,,Louisiana,TRUE,prr@lsu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of New Orleans,UNO,,Louisiana,TRUE,HR@uno.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Maine,University of Maine,University of Maine,Maine,TRUE,foaa@maine.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Southern Maine,University of Maine,University of Maine,Maine,TRUE,theodore.chelis@maine.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Maine at Farmington,University of Maine,University of Maine,Maine,TRUE,lgardner@maine.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Maryland,UM,University of Maryland,Maryland,FALSE,,https://docs.google.com/forms/d/e/1FAIpQLSfxq4qID1gx_4qFq58iQQPB29vFDC-1I5RyhNa61P4iidNe6w/viewform,TRUE,,,,,,Semester,TRUE,FALSE
+Towson University,Towson,,Maryland,FALSE,,https://www.towson.edu/counsel/piarequests.html,TRUE,,,,,,Semester,TRUE,FALSE
+University of Maryland Baltimore,UM Baltimore,University of Maryland,Maryland,TRUE,mpia@umaryland.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Massachusetts, Amherst",UMass Amherst,University of Massachusetts,Massachusetts,FALSE,,https://umassp.tfaforms.net/309,TRUE,,,,,,Semester,TRUE,FALSE
+Worchester State University,Worchester State,,Massachusetts,FALSE,WSU_PublicRecords@worcester.edu,https://docs.google.com/forms/d/1Z5f63OnApjKQOMJAGGsFJYO7AnEdynnIoNlPWvsN9vk/viewform?edit_requested=true,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Massachusetts, Boston",UMB,University of Massachusetts,Massachusetts,TRUE,publicrecords@umb.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Minnesota,UMN,,Minnesota,FALSE,,https://umn.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+"Minnesota State University, Mankato",,,Minnesota,FALSE,,https://forms.office.com/Pages/ResponsePage.aspx?id=xscRULQKq0ae9PrnSpIaf9YU66x03LpKpZ-dqsa1DJxURjBaMFZLMENKMDNHVk1FVzBBTFFBWTczRC4u,TRUE,,,,,,Semester,TRUE,FALSE
+University of Mississippi,Ole Miss,,Mississippi,TRUE,publicrecords@olemiss.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Southern Mississippi,USM,,Mississippi,TRUE,publicrecords@usm.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Missouri,Mizzou,University of Missouri,Missouri,FALSE,,https://universityofmissouri.mycusthelp.com/WEBAPP/_rs/(S(ex0z0kyqbl4b44sai1joc3ia))/RequestLogin.aspx?sSessionID=&rqst=1&target=ZwpfxNlipoMF2Ut+o/ukfVBzG+KwiVYui6tQ4jBaoyEbXnRUsppuaM9gxkGUAiqmY6bx2x6s+8GPrd0Llw+EPhizz6Hs8jVNfkAsIs+6AqHA+verJPi3UtIaH6Yo1ZLC,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Missouri, Kansas City",,University of Missouri,Missouri,FALSE,,https://universityofmissouri.mycusthelp.com/WEBAPP/_rs/(S(ex0z0kyqbl4b44sai1joc3ia))/RequestLogin.aspx?sSessionID=&rqst=1&target=ZwpfxNlipoMF2Ut+o/ukfVBzG+KwiVYui6tQ4jBaoyEbXnRUsppuaM9gxkGUAiqmY6bx2x6s+8GPrd0Llw+EPhizz6Hs8jVNfkAsIs+6AqHA+verJPi3UtIaH6Yo1ZLC,TRUE,,,,,,Semester,TRUE,FALSE
+Missouri State University,,,Missouri,TRUE,CustodianOfRecords@MissouriState.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Southeast Missouri State University,SEMO,,Missouri,TRUE,cmartin@semo.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Nevada, Reno",UNR,University of Nevada,Nevada,TRUE,publicrecords@unr.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Nevada, Las Vegas",UNLV,University of Nevada,Nevada,TRUE,publicrecords@unlv.edu,https://unlv.justfoia.com/Forms/Launch/d705cbd6-1396-49b7-939e-8d86c5a87deb,TRUE,,,,,,Semester,TRUE,FALSE
+University of New Hampshire,UNH,,New Hampshire,FALSE,,https://td.usnh.edu/TDClient/60/Portal/Requests/TicketRequests/NewForm?ID=ubcKtwQvW7c_&RequestorType=Service,TRUE,,,,,,Semester,TRUE,FALSE
+Rutgers University,Rutgers,,New Jersey,FALSE,,https://rutgers.mycusthelp.com/WEBAPP/_rs/(S(0ofuhzcaxkljnzhuipkzzq4p))/RequestLogin.aspx?sSessionID=&rqst=1&target=YpURA3m6cNU+N1K9kEqQhqz8yC2ZLKNdSdB4wnowVJ5S8CGTBp2GIItHg4/I0pUM8Jvp1AAd4YheCcTrA795fG9P3xL5LmB/wFQjiIoSWN7tLnJa+Bm/oEirHbO2IQAI,TRUE,,,,,,Semester,TRUE,FALSE
+University of New Mexico,UNM,,New Mexico,FALSE,,https://unmipra.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+New Mexico State University,NMSU,,New Mexico,TRUE,gencounsel@nmsu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of North Carolina System,UNC,,North Carolina,FALSE,,https://uncsystemoffice.highq.com/uncsystemoffice/renderSmartForm.action?formId=64dab5e2-b3c3-4bdf-a143-952f44105f36,TRUE,,,,,,,FALSE,TRUE
+University of North Carolina at Charlotte,UNC Charlotte,University of North Carolina,North Carolina,FALSE,,https://unccharlotte.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+University of North Carolina at Chapel Hill,UNC Chapel Hill,University of North Carolina,North Carolina,FALSE,,https://nextrequest.unc.edu/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+North Carolina State University,NCSU,,North Carolina,FALSE,,https://ncsu.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+North Carolina A&T State University,NCAT,,North Carolina,TRUE,public_records@ncat.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Miami University,Miami,,Ohio,TRUE,generalcounsel@miamioh.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Cincinnati,UC,,Ohio,TRUE,public.records@uc.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Ohio University,Ohio University,,Ohio,TRUE,legalaffairs@ohio.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Kent State University,Kent State,,Ohio,TRUE,publicrecords@kent.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Ohio State University,OSU,,Ohio,TRUE,publicrecords@osu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Oklahoma,OU,,Oklahoma,FALSE,,https://universityofoklahoma.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+Oklahoma State University,Ok State,,Oklahoma,FALSE,,https://openrecords.okstate.edu/index.php/module/Default/action/ContactInfo,TRUE,,,,,,Semester,TRUE,FALSE
+University of South Carolina,USC,,South Carolina,FALSE,,https://universityofsouthcarolina.justfoia.com/Forms/Launch/d705cbd6-1396-49b7-939e-8d86c5a87deb,TRUE,,,,,,Semester,TRUE,FALSE
+Clemson University,Clemson,,South Carolina,TRUE,foia@clemson.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Tennessee,UT,,Tennessee,FALSE,,https://universityoftennessee.justfoia.com/publicportal/home/newrequest,TRUE,,,,,,Semester,TRUE,FALSE
+University of Utah,,,Utah,FALSE,,https://universityofutah.govqa.us/WEBAPP/_rs/(S(efonhr01qsv4ci0cbodvk5rj))/SupportHome.aspx?sSessionID=&lp=2,TRUE,,,,,,Semester,TRUE,FALSE
+Utah State University,Utah State,,Utah,FALSE,,https://highq.usu.edu/usulegal/renderSmartForm.action?formId=353b9ecd-cf24-4aab-a741-127fe947bf20,TRUE,,,,,,Semester,TRUE,FALSE
+University of Vermont,,,Vermont,TRUE,public.records@uvm.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+Vermont State University System,VSU,,Vermont,TRUE,Patty.Turley@vsc.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Virginia,UVA,,Virginia,TRUE,foia@virginia.edu,https://universityofvirginia.mycusthelp.com/WEBAPP/_rs/(S(siaedxoq10grsqm1jt5oskgp))/supporthome.aspx,TRUE,,,,,,Semester,TRUE,FALSE
+Virginia Tech,,,Virginia,TRUE,foia@vt.edu,https://virginiatech.nextrequest.com/,TRUE,,,,,,Semester,TRUE,FALSE
+Virginia Commonwealth University,VCU,,Virginia,FALSE,,https://vcu.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+Christopher Newport University,CNU,,Virginia,TRUE,tkramer@cnu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+James Madison University,JMU,,Virginia,FALSE,,https://jamesmadisonuniversity.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+Old Dominion University,Old Dominion,,Virginia,TRUE,foia@odu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Wisconsin System,UW,University of Wisconsin,Wisconsin,TRUE,uwsarecords@wisconsin.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Wisconsin, Madison",UW Madison,University of Wisconsin,Wisconsin,FALSE,,https://wiscedu.justfoia.com/Forms/Launch/d705cbd6-1396-49b7-939e-8d86c5a87deb,TRUE,,,,,,,FALSE,TRUE
+"University of Wisconsin, Milwaukee",UW Milwaukee,University of Wisconsin,Wisconsin,TRUE,public-records@uwm.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Wisconsin, Green Bay",UW Green Bay,University of Wisconsin,Wisconsin,,maines@uwgb.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Wisconsin, Stevens Point",UW Stevens Point,University of Wisconsin,Wisconsin,,bcasselb@uwsp.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Wisconsin, Whitewater",UW Whitewater,University of Wisconsin,Wisconsin,,motszkoj@uww.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Wisconsin, La Crosse",UW La Crosse,University of Wisconsin,Wisconsin,,publicrecords@uwlax.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Wisconsin, Eau Claire",UW Eau Claire,University of Wisconsin,Wisconsin,,beersj@uwec.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Delaware,UD,,Delaware,TRUE,FOIA-email@udel.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Montana,UM,,Montana,FALSE,,https://forms.office.com/Pages/ResponsePage.aspx?id=5XxAaNoD_0mvCnJL4NN8nXXseCtvPDBImGs4qn1TNlRUMFk4RkpNMTQ5TkI3M0JMWklKWURFR0xOSiQlQCN0PWcu,TRUE,,,,,,Semester,TRUE,FALSE
+"University of Nebraska, Lincoln",UNL,,Nebraska,TRUE,mollymccleery@nebraska.edu,,TRUE,,,,,,Semester,TRUE,FALSE
+University of Wyoming,UW,,Wyoming,FALSE,,https://universityofwyoming.nextrequest.com/requests/new,TRUE,,,,,,Semester,TRUE,FALSE
+West Virginia University,WVU,,West Virginia,TRUE,foia@mail.wvu.edu,,TRUE,,,,,,Semester,TRUE,FALSE
