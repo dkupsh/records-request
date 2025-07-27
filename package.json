@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://dkupsh.github.io/records-request",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "next dev --turbopack",
     "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
