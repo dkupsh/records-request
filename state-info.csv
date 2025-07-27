@@ -1,0 +1,51 @@
+state,foia_law,template_file
+Alabama,Alabama Open Records Act,alabama_template.txt
+Alaska,Alaska Public Records Act,alaska_template.txt
+Arizona,Arizona Public Records Law,arizona_template.txt
+Arkansas,Arkansas Freedom of Information Act,arkansas_template.txt
+California,California Public Records Act,california_template.txt
+Colorado,Colorado Open Records Act,colorado_template.txt
+Connecticut,Connecticut Freedom of Information Act,connecticut_template.txt
+Delaware,Delaware Freedom of Information Act,delaware_template.txt
+Florida,Florida Public Records Law,florida_template.txt
+Georgia,Georgia Open Records Act,georgia_template.txt
+Hawaii,Hawaii Uniform Information Practices Act,hawaii_template.txt
+Idaho,Idaho Public Records Law,idaho_template.txt
+Illinois,Illinois Freedom of Information Act,illinois_template.txt
+Indiana,Indiana Access to Public Records Act,indiana_template.txt
+Iowa,Iowa Open Records Law,iowa_template.txt
+Kansas,Kansas Open Records Act,kansas_template.txt
+Kentucky,Kentucky Open Records Act,kentucky_template.txt
+Louisiana,Louisiana Public Records Law,louisiana_template.txt
+Maine,Maine Freedom of Access Act,maine_template.txt
+Maryland,Maryland Public Information Act,maryland_template.txt
+Massachusetts,Massachusetts Public Records Law,massachusetts_template.txt
+Michigan,Michigan Freedom of Information Act,michigan_template.txt
+Minnesota,Minnesota Government Data Practices Act,minnesota_template.txt
+Mississippi,Mississippi Public Records Act,mississippi_template.txt
+Missouri,Missouri Sunshine Law,missouri_template.txt
+Montana,Montana Public Records Act,montana_template.txt
+Nebraska,Nebraska Public Records Law,nebraska_template.txt
+Nevada,Nevada Public Records Act,nevada_template.txt
+New Hampshire,New Hampshire Right to Know Law,new_hampshire_template.txt
+New Jersey,New Jersey Open Public Records Act,new_jersey_template.txt
+New Mexico,New Mexico Inspection of Public Records Act,new_mexico_template.txt
+New York,New York Freedom of Information Law,new_york_template.txt
+North Carolina,North Carolina Public Records Law,north_carolina_template.txt
+North Dakota,North Dakota Open Records Law,north_dakota_template.txt
+Ohio,Ohio Public Records Act,ohio_template.txt
+Oklahoma,Oklahoma Open Records Act,oklahoma_template.txt
+Oregon,Oregon Public Records Law,oregon_template.txt
+Pennsylvania,Pennsylvania Right to Know Law,pennsylvania_template.txt
+Rhode Island,Rhode Island Access to Public Records Act,rhode_island_template.txt
+South Carolina,South Carolina Freedom of Information Act,south_carolina_template.txt
+South Dakota,South Dakota Open Records Law,south_dakota_template.txt
+Tennessee,Tennessee Public Records Act,tennessee_template.txt
+Texas,Texas Public Information Act,texas_template.txt
+Utah,Utah Government Records Access and Management Act,utah_template.txt
+Vermont,Vermont Public Records Law,vermont_template.txt
+Virginia,Virginia Freedom of Information Act,virginia_template.txt
+Washington,Washington Public Records Act,washington_template.txt
+West Virginia,West Virginia Freedom of Information Act,west_virginia_template.txt
+Wisconsin,Wisconsin Public Records Law,wisconsin_template.txt
+Wyoming,Wyoming Public Records Act,wyoming_template.txt
