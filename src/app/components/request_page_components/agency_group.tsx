@@ -17,12 +17,14 @@ export interface Group {
 function buildGroupTree(agencies: Agency[], keys: (keyof Agency)[]): Group {
 	let current_groups: Group[] = [];
 	for (const agency of agencies) {
-		current_groups.push({
-			parent: null,
-			children: [],
-			name: agency.full_name,
-			agency: agency,
-		});
+		if (agency) {
+			current_groups.push({
+				parent: null,
+				children: [],
+				name: agency.full_name,
+				agency: agency,
+			});
+		}
 	}
 
 	for (const key of keys) {
@@ -95,6 +97,7 @@ const GroupTreeNode: React.FC<{
 			/>
 		);
 	}
+	console.log(group.children);
 
 	if (isRoot) {
 		return (

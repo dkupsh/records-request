@@ -1,8 +1,10 @@
 import Papa from "papaparse";
 import { Agency, State } from "@/app/util/agency_util";
+const base = "/records-request"; 
+
 
 export async function loadTemplate(templateFile: string): Promise<string> {
-  const response = await fetch(`/templates/${templateFile}`);
+  const response = await fetch(`${base}/templates/${templateFile}`);
   if (!response.ok) {
     throw new Error(`Failed to load template: ${templateFile}`);
   }
@@ -10,7 +12,7 @@ export async function loadTemplate(templateFile: string): Promise<string> {
 }
 
 export async function loadStateInfo(): Promise<State[]> {
-  const res = await fetch("/state-info.csv"); // adjust the path as needed
+  const res = await fetch(`${base}/state-info.csv`); // adjust the path as needed
   const csvText = await res.text();
 
   const parsed = Papa.parse<State>(csvText, {
@@ -27,7 +29,7 @@ export async function loadStateInfo(): Promise<State[]> {
 }
 
 export async function loadRecordsAgencies(): Promise<Agency[]> {
-  const res = await fetch("/records-agencies.csv");
+  const res = await fetch(`${base}/records-agencies.csv`);
   const csvText = await res.text();
 
   const parsed = Papa.parse<Agency>(csvText, {
@@ -49,6 +51,7 @@ export async function loadRecordsAgencies(): Promise<Agency[]> {
     if (a.system !== b.system) return a.system.localeCompare(b.system);
     return a.full_name.localeCompare(b.full_name);
   });
+  console.log("Sorted agencies:", sorted);
 
   return sorted;
 }

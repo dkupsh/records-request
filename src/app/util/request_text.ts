@@ -1,5 +1,7 @@
 import { Agency, State, UserInfo, agency_placeholders, state_placeholders, user_placeholders } from "@/app/util/agency_util";
 
+const base = "/records-request";
+
 export async function processRequestText(text: string, requester: UserInfo, agency: Agency, state: State): Promise<string> {
   // Replace templated text with agency-specific information
   let processedText = replaceTemplatedText(text, requester, agency, state);
@@ -36,7 +38,7 @@ export function replaceTemplatedText(text: string, requester: UserInfo, agency: 
 }
 
 async function addTemplate(templateFile: string, body: string, userInfo: UserInfo): Promise<string> {
-  const res = await fetch(`/templates/${templateFile}`);
+  const res = await fetch(`${base}/templates/${templateFile}`);
   if (!res.ok) {
     throw new Error(`Failed to fetch template: ${templateFile}`);
   }
