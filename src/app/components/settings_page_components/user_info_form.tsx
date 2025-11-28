@@ -1,5 +1,10 @@
+"use client";
+
 import React, { useState } from "react";
 import { Card, Form } from "react-bootstrap";
+import GoogleSheetName from "./google_sheet_input";
+import GoogleSheetInput from "./google_sheet_select";
+import { colors, fonts } from "@/app/lib/theme";
 
 interface UserInfo {
 	name: string;
@@ -7,11 +12,15 @@ interface UserInfo {
 	email: string;
 	phone: string;
 	address: string;
+	sheetUrl: string;
+	sheetName: string;
 }
 
 interface UserInfoFormProps {
 	user_info: UserInfo;
 	setUserInfo: React.Dispatch<React.SetStateAction<UserInfo>>;
+	isSheetSet: boolean;
+	setIsSheetSet: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const isValidEmail = (email: string) =>
@@ -23,15 +32,30 @@ const isValidPhone = (phone: string) =>
 const UserInfoForm: React.FC<UserInfoFormProps> = ({
 	user_info,
 	setUserInfo,
+	isSheetSet,
+	setIsSheetSet,
 }) => {
 	const [touched, setTouched] = useState({
 		email: false,
 		phone: false,
 	});
 
+	const headerStyle: React.CSSProperties = {
+		backgroundColor: colors.light_dark,
+		color: colors.white,
+		fontFamily: fonts.primary,
+		fontWeight: "bold",
+		textAlign: "center",
+	};
+
 	return (
-		<Card className="mb-4 shadow-sm">
-			<Card.Header as="h5">Requester Info</Card.Header>
+		<Card
+			className="mb-4 shadow-sm"
+			style={{ fontFamily: fonts.primary, color: colors.dark }}
+		>
+			<Card.Header as="h5" style={headerStyle}>
+				Requester Info
+			</Card.Header>
 			<Card.Body>
 				<Form>
 					<Form.Group className="mb-3" controlId="userName">
@@ -121,6 +145,30 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
 							}
 						/>
 					</Form.Group>
+				</Form>
+			</Card.Body>
+			<Card.Header as="h5" style={headerStyle}>
+				Google Integration
+			</Card.Header>
+			<Card.Body>
+				<Form>
+					<GoogleSheetInput
+						sheetUrl={user_info.sheetUrl}
+						setSheetUrl={(url) =>
+							setUserInfo({ ...user_info, sheetUrl: url })
+						}
+						setIsSheetSet={setIsSheetSet}
+						setSheetName={(name) =>
+							setUserInfo({ ...user_info, sheetName: name })
+						}
+					/>
+					<GoogleSheetName
+						sheetName={user_info.sheetName}
+						setSheetName={(name) =>
+							setUserInfo({ ...user_info, sheetName: name })
+						}
+						isSheetSet={isSheetSet}
+					/>
 				</Form>
 			</Card.Body>
 		</Card>

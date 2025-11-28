@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Button, Container, Row } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import EmailTextBoxt from "@/app/components/send_page_components/email_text_box";
+import EmailTextBoxt from "@/app/components/send/send_box/email_text_box";
+import { colors } from "@/app/lib/theme";
 
 interface EmailRequesstProps {
 	emailToLine: string;
@@ -36,13 +36,26 @@ const EmailRequest: React.FC<EmailRequesstProps> = ({
 				<EmailTextBoxt
 					label={"Body"}
 					text={emailBody}
-					height={20}
+					height={19}
 					editable={true}
 					setText={setEmailBody}
 				/>
 			</Row>
-			<Row>
-				<Button variant="primary" type="button" onClick={handleSend}>
+			<Row
+				style={{
+					display: "flex",
+					justifyContent: "center", // centers horizontally
+				}}
+			>
+				<Button
+					variant="primary"
+					type="button"
+					onClick={handleSend}
+					style={{
+						width: "60%", // button width
+						backgroundColor: colors.blue,
+					}}
+				>
 					Send
 				</Button>
 			</Row>

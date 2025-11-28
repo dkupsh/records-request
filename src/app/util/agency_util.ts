@@ -29,18 +29,20 @@ export interface UserInfo {
   email: string;
   phone: string;
   address: string;
+  sheetUrl: string;
+  sheetName: string;
 }
 
 export interface FilterOption {
-	label: string;
-	property: keyof Agency;
-	options: string[];
-	default_option: string;
+  label: string;
+  property: keyof Agency;
+  options: string[];
+  default_option: string;
 }
 
 export interface FilterSelectionOptions {
-	is_selected: boolean;
-	selected_option: string;
+  is_selected: boolean;
+  selected_option: string;
 }
 export const agency_placeholders = [
   { label: "Full Name", value: "{{full_name}}", property: "full_name" },

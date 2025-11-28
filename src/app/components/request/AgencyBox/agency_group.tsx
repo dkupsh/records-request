@@ -4,7 +4,7 @@ import {
 	GroupOption,
 	AgencyOption,
 	SelectAll,
-} from "@/app/components/request_page_components/agency_option";
+} from "@/app/components/request/AgencyBox/agency_option";
 import { useEffect, useState } from "react";
 
 export interface Group {

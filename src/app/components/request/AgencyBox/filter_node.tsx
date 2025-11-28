@@ -1,6 +1,5 @@
 import React from "react";
 import { Form, Row, Col } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import { FilterOption } from "@/app/util/agency_util";
 

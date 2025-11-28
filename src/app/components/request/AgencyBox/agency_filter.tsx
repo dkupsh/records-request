@@ -4,9 +4,9 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { FilterOption, FilterSelectionOptions } from "@/app/util/agency_util";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+import FilterNode from "@/app/components/request/AgencyBox/filter_node";
 
-import FilterNode from "@/app/components/request_page_components/filter_node";
+import { colors, fonts } from "@/app/lib/theme";
 
 interface AgencyFilterProps {
 	filters: FilterOption[];
@@ -71,12 +71,33 @@ const AgencyFilter: React.FC<AgencyFilterProps> = ({
 
 	return (
 		<Dropdown align="end">
-			<Dropdown.Toggle variant="outline-secondary" title="Filter">
+			{/* Dropdown toggle button */}
+			<Dropdown.Toggle
+				variant="outline-secondary"
+				style={{
+					backgroundColor: colors.dark,
+					color: colors.light,
+					fontFamily: fonts.primary,
+					borderColor: colors.white,
+					outline: "none",
+					boxShadow: "none",
+				}}
+			>
 				<i className="bi bi-funnel"></i>
 			</Dropdown.Toggle>
 
+			{/* Dropdown menu */}
 			<Dropdown.Menu
-				style={{ padding: "0.5rem 1rem", minWidth: "250px" }}
+				style={{
+					backgroundColor: colors.dark,
+					color: colors.light,
+					fontFamily: fonts.primary,
+					padding: "0.5rem 1rem",
+					minWidth: "250px",
+					border: `1px solid ${colors.white}`,
+					boxShadow: "none",
+					fontSize: "0.75rem",
+				}}
 			>
 				{filters.map((filter) => (
 					<FilterNode

@@ -2,8 +2,8 @@
 
 import React, { useRef } from "react";
 import { Form, Row } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import ButtonToken from "@/app/components/request_page_components/token_buttons";
+import ButtonToken from "@/app/components/request/RequestBox/token_buttons";
+import { colors } from "@/app/lib/theme";
 
 interface RequestBoxProps {
 	height?: string | number;
@@ -20,12 +20,6 @@ const RequestTextBox: React.FC<RequestBoxProps> = ({
 
 	return (
 		<div>
-			<Row className="mb-2 justify-content-center">
-				<Form.Label style={{ display: "block", textAlign: "center" }}>
-					Request
-				</Form.Label>
-			</Row>
-
 			<div
 				style={{
 					display: "flex",
@@ -52,7 +46,11 @@ const RequestTextBox: React.FC<RequestBoxProps> = ({
 						ref={textareaRef}
 						value={textValue}
 						onChange={(e) => setTextValue(e.target.value)}
-						style={{ height: "100%", resize: "none" }}
+						style={{
+							height: "100%",
+							resize: "none",
+							backgroundColor: colors.white,
+						}}
 					/>
 				</Row>
 			</div>

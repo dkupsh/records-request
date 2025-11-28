@@ -1,6 +1,6 @@
 import { Agency } from "@/app/util/agency_util";
 
-import { AgencyOption } from "@/app/components/request_page_components/agency_option";
+import { AgencyOption } from "@/app/components/request/AgencyBox/agency_option";
 
 export interface Group {
 	parent: Group | null;

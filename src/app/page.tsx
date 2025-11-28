@@ -1,39 +1,28 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
-import RequestHome from "@/app/components/request_home";
-import SendHome from "@/app/components/send_home";
-import Cookies from "js-cookie";
+import RequestHome from "@/app/components/request/request_home";
+import SendHome from "@/app/components/send/send_home";
 
 import {
 	Agency,
 	State,
-	UserInfo,
 	generateMailtoLink,
 	getStateForAgency,
 } from "@/app/util/agency_util";
+
 import { loadStateInfo, loadRecordsAgencies } from "@/app/util/load_util";
 
 import {
 	processRequestText,
+	formatRequestText,
 	replaceTemplatedText,
 } from "@/app/util/request_text";
-import { Button } from "react-bootstrap";
-import Settings from "./components/settings";
-
-const USER_INFO_COOKIE = "user_info";
+import { appendToSheet } from "./util/google_sheet";
+import { useUser } from "./components/providers/user_info_provider";
 
 export default function HomePage() {
-	const [userInfo, setUserInfo] = useState<UserInfo>({
-		name: "",
-		organization: "",
-		email: "",
-		phone: "",
-		address: "",
-	});
 	const [agencies, setAgencies] = useState<Agency[]>([]);
 	const [selectedAgencies, setSelectedAgencies] = useState<Agency[]>([]);
 	const [stateInfo, setStateInfo] = useState<State[]>([]);
@@ -42,30 +31,13 @@ export default function HomePage() {
 	const [requestText, setRequestText] = useState("");
 	const [showMailLinks, setShowMailLinks] = useState(false);
 	const [errorModal, setErrorModal] = useState(false);
-	const [showSettings, setShowSettings] = useState(false);
 	const [emailToLine, setEmailToLine] = useState("");
 	const [emailSubjectLine, setEmailSubjectLine] = useState("");
+	const [formattedRequestText, setFormattedRequestText] = useState("");
 	const [emailBody, setEmailBody] = useState("");
 	const [isEmail, setIsEmail] = useState(true);
 
-	useEffect(() => {
-		const cookieValue = Cookies.get(USER_INFO_COOKIE);
-		if (cookieValue) {
-			try {
-				const parsed = JSON.parse(cookieValue);
-				setUserInfo(parsed);
-			} catch (e) {
-				console.error("Failed to parse userInfo cookie", e);
-			}
-		}
-	}, []);
-
-	// Save to cookie whenever userInfo changes
-	useEffect(() => {
-		Cookies.set(USER_INFO_COOKIE, JSON.stringify(userInfo), {
-			expires: 365,
-		});
-	}, [userInfo]);
+	const { userInfo, isSheetSet } = useUser();
 
 	useEffect(() => {
 		loadStateInfo().then(setStateInfo);
@@ -101,6 +73,14 @@ export default function HomePage() {
 			currentState
 		).then((completedTemplate) => {
 			setEmailBody(completedTemplate);
+		});
+		formatRequestText(
+			requestText,
+			userInfo,
+			currentAgency,
+			currentState
+		).then((formattedText) => {
+			setFormattedRequestText(formattedText);
 		});
 	}, [
 		currentAgencyIndex,
@@ -142,7 +122,7 @@ export default function HomePage() {
 		setCurrentAgencyIndex(0);
 	};
 
-	const sendRequest = () => {
+	const sendRequest = async () => {
 		if (isEmail) {
 			const mailToLink = generateMailtoLink(
 				selectedAgencies[currentAgencyIndex],
@@ -164,6 +144,14 @@ export default function HomePage() {
 				? prev
 				: [...prev, currentAgencyIndex]
 		);
+
+		if (isSheetSet) {
+			await appendToSheet(
+				userInfo,
+				selectedAgencies[currentAgencyIndex],
+				formattedRequestText
+			);
+		}
 	};
 
 	const startIndexRef = useRef(currentAgencyIndex);
@@ -186,23 +174,6 @@ export default function HomePage() {
 
 	return (
 		<div>
-			<div className="position-relative">
-				<Button
-					variant="secondary"
-					size="sm"
-					className="position-absolute top-0 end-0 d-flex align-items-center justify-content-center"
-					onClick={() => setShowSettings(true)}
-				>
-					<i className="bi bi-gear-fill"></i>
-				</Button>
-			</div>
-			<Settings
-				showSettings={showSettings}
-				setShowSettings={setShowSettings}
-				user_info={userInfo}
-				setUserInfo={setUserInfo}
-			/>
-
 			{!showMailLinks && (
 				<RequestHome
 					agencies={agencies}

@@ -6,16 +6,17 @@ import {
 	buildGroupTree,
 	GroupTreeNode,
 	Group,
-} from "@/app/components/request_page_components/agency_group";
+} from "@/app/components/request/AgencyBox/agency_group";
 
-import AgencyFilter from "@/app/components/request_page_components/agency_filter";
+import AgencyFilter from "@/app/components/request/AgencyBox/agency_filter";
 
 import { FilterOption, FilterSelectionOptions } from "@/app/util/agency_util";
 
 import {
 	buildGroupSearchTree,
 	SearchTreeNode,
-} from "@/app/components/request_page_components/agency_search";
+} from "@/app/components/request/AgencyBox/agency_search";
+import { colors, fonts } from "@/app/lib/theme";
 
 interface AgencySearchBoxProps {
 	agencies: Agency[];
@@ -151,11 +152,18 @@ const CheckboxList: React.FC<AgencySearchBoxProps> = ({
 					width: "100%",
 					height: height,
 					overflowY: "auto",
-					border: "1px solid #ced4da",
+					color: colors.light,
+					fontFamily: fonts.primary,
 					borderRadius: "0.25rem",
+					backgroundColor: colors.light,
 				}}
 			>
-				<div style={{ padding: "0.75rem", backgroundColor: "#f8f9fa" }}>
+				<div
+					style={{
+						padding: "0.75rem",
+						backgroundColor: colors.dark,
+					}}
+				>
 					<Form.Control
 						type="text"
 						placeholder="Search agencies..."
@@ -164,7 +172,9 @@ const CheckboxList: React.FC<AgencySearchBoxProps> = ({
 					/>
 					<div
 						className="d-flex justify-content-between align-items-center mt-2"
-						style={{ fontSize: "0.9rem", color: "#555" }}
+						style={{
+							fontSize: "0.9rem",
+						}}
 					>
 						<div>{selectedAgencies.length} selected</div>
 						<AgencyFilter
@@ -174,24 +184,29 @@ const CheckboxList: React.FC<AgencySearchBoxProps> = ({
 						/>
 					</div>
 				</div>
-
-				{search === "" && (
-					<GroupTreeNode
-						key={root.name}
-						parentCollapsed={true}
-						group={root}
-						isSelected={isSelected}
-						toggleSelection={toggleSelection}
-					/>
-				)}
-				{search !== "" && (
-					<SearchTreeNode
-						group={searchTree}
-						searchText={search}
-						isSelected={isSelected}
-						toggleSelection={toggleSelection}
-					/>
-				)}
+				<div
+					style={{
+						backgroundColor: colors.light,
+					}}
+				>
+					{search === "" && (
+						<GroupTreeNode
+							key={root.name}
+							parentCollapsed={true}
+							group={root}
+							isSelected={isSelected}
+							toggleSelection={toggleSelection}
+						/>
+					)}
+					{search !== "" && (
+						<SearchTreeNode
+							group={searchTree}
+							searchText={search}
+							isSelected={isSelected}
+							toggleSelection={toggleSelection}
+						/>
+					)}
+				</div>
 			</div>
 		</Container>
 	);

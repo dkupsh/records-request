@@ -2,13 +2,13 @@
 
 import React from "react";
 import { Button, Container, Modal } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import RequestTextBox from "@/app/components/request_page_components/request";
-import AgencyBox from "@/app/components/request_page_components/agency";
+import RequestTextBox from "@/app/components/request/RequestBox/request";
+import AgencyBox from "@/app/components/request/AgencyBox/agency";
 import { Agency } from "@/app/util/agency_util";
+import { colors } from "@/app/lib/theme";
 
 interface RequestHomeProps {
 	agencies: Agency[];
@@ -35,7 +35,15 @@ const RequestHome: React.FC<RequestHomeProps> = ({
 
 	return (
 		<Container fluid>
-			<Row>
+			<Row
+				style={{
+					display: "flex",
+					justifyContent: "center", // centers horizontally
+					marginTop: "1rem",
+					marginRight: "1rem",
+					marginLeft: "1rem",
+				}}
+			>
 				<Col sm={4}>
 					<AgencyBox
 						agencies={agencies}
@@ -52,8 +60,22 @@ const RequestHome: React.FC<RequestHomeProps> = ({
 					/>
 				</Col>
 			</Row>
-			<Row>
-				<Button variant="primary" type="button" onClick={handleSubmit}>
+			<Row
+				style={{
+					display: "flex",
+					justifyContent: "center", // centers horizontally
+					marginTop: "1rem",
+				}}
+			>
+				<Button
+					variant="primary"
+					type="button"
+					onClick={handleSubmit}
+					style={{
+						width: "60%", // button width
+						backgroundColor: colors.blue,
+					}}
+				>
 					Submit
 				</Button>
 			</Row>
@@ -66,6 +88,9 @@ const RequestHome: React.FC<RequestHomeProps> = ({
 					<Button
 						variant="primary"
 						onClick={() => setErrorModal(false)}
+						style={{
+							backgroundColor: colors.blue,
+						}}
 					>
 						Ok
 					</Button>

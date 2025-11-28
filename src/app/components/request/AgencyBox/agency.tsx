@@ -1,13 +1,10 @@
 "use client";
 
 import React from "react";
-import { Form } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import { Agency } from "@/app/util/agency_util";
 
-import CheckboxList from "@/app/components/request_page_components/agency_search_box";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+import CheckboxList from "@/app/components/request/AgencyBox/agency_search_box";
 
 interface AgencyBoxProps {
 	agencies: Agency[];
@@ -25,11 +22,6 @@ const AgencyBox: React.FC<AgencyBoxProps> = ({
 }) => {
 	return (
 		<div>
-			<Row>
-				<Form.Label style={{ display: "block", textAlign: "center" }}>
-					Agency
-				</Form.Label>
-			</Row>
 			<Row>
 				<CheckboxList
 					agencies={agencies}

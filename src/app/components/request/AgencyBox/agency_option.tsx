@@ -1,5 +1,6 @@
 import { Form } from "react-bootstrap";
 import { Agency } from "@/app/util/agency_util";
+import { colors } from "@/app/lib/theme";
 
 function CaretIcon({ isOpen }: { isOpen: boolean }) {
 	return (
@@ -8,7 +9,7 @@ function CaretIcon({ isOpen }: { isOpen: boolean }) {
 				display: "inline-block",
 				transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
 				transition: "transform 0.2s ease",
-				color: "#333", // dark caret color
+				color: colors.light_dark, // dark caret color
 				fontSize: "16px",
 				lineHeight: 1,
 				userSelect: "none",
@@ -53,8 +54,8 @@ const SelectAll: React.FC<SelectAllProps> = ({ name, checked, onChange }) => {
 				alignItems: "center",
 				justifyContent: "space-between",
 				padding: "0.75rem 1rem",
-				border: "2px solid #ccc",
-				backgroundColor: "#6c757d",
+				border: `2px solid ${colors.dark}`,
+				backgroundColor: colors.light_dark,
 				color: "white",
 				userSelect: "none",
 				cursor: "pointer",
@@ -98,8 +99,8 @@ const GroupOption: React.FC<GroupOptionProps> = ({
 				alignItems: "center",
 				justifyContent: "space-between",
 				padding: "0.75rem 1rem",
-				border: "2px solid #ccc",
-				backgroundColor: "#6c757d",
+				border: `2px solid ${colors.dark}`,
+				backgroundColor: colors.light_dark,
 				color: "white",
 				userSelect: "none",
 				cursor: "pointer",
@@ -127,8 +128,8 @@ const GroupOption: React.FC<GroupOptionProps> = ({
 				}}
 				aria-label={caretOpen ? "Collapse" : "Expand"}
 				style={{
-					backgroundColor: "white",
-					border: "1px solid #ccc",
+					backgroundColor: colors.white,
+					border: `1px solid ${colors.dark}`,
 					borderRadius: "2px",
 					width: 24,
 					height: 24,
@@ -166,8 +167,8 @@ const AgencyOption: React.FC<AgencyOptionProps> = ({
 				alignItems: "center",
 				justifyContent: "space-between",
 				padding: "0.75rem 1rem",
-				border: "2px solid #ccc",
-				backgroundColor: checked ? "#28a745" : "#dc3545",
+				border: `2px solid ${colors.dark}`,
+				backgroundColor: checked ? colors.green : colors.red,
 				color: "white",
 				userSelect: "none",
 				cursor: "pointer",

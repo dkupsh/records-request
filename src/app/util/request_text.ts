@@ -12,6 +12,11 @@ export async function processRequestText(text: string, requester: UserInfo, agen
   return processedText;
 }
 
+export async function formatRequestText(text: string, requester: UserInfo, agency: Agency, state: State): Promise<string> {
+  // Replace templated text with agency-specific information
+  return replaceTemplatedText(text, requester, agency, state);
+}
+
 export function replaceTemplatedText(text: string, requester: UserInfo, agency: Agency, state: State): string {
 	if (!agency) return text;
   if (!state) return text;
