@@ -76,6 +76,7 @@ export default function GoogleSheetInput({
 		}, 600);
 
 		return () => clearTimeout(delay);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [sheetUrl, session]); // Re-validate when session changes
 
 	// ----------- COLOR GLOW CLASS ----------

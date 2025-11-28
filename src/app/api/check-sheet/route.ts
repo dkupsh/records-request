@@ -1,7 +1,7 @@
 // app/api/check-sheet/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route"; // adjust path to your auth config
+import { authOptions } from "@/app/lib/authoptions";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { OAuth2Client } from "google-auth-library";
 
