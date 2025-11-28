@@ -4,15 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/lib/authoptions";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { OAuth2Client } from "google-auth-library";
-
-interface AppendPayload {
-    requester_name: string;
-    agency_name: string;
-    sheet_name: string;
-    agency_system: string;
-    date_requested: string;
-    request_text: string;
-}
+import { AppendPayload } from "@/app/util/google_sheet";
 
 export async function POST(req: NextRequest) {
     let spreadsheetId = '';
@@ -29,18 +21,23 @@ export async function POST(req: NextRequest) {
 
         const accessToken = session.accessToken as string;
 
-        const { sheetUrl, payload } = await req.json() as {
-            sheetUrl: string;
-            payload: AppendPayload
-        };
+        const { payload: rawPayload } = await req.json();
 
-        if (!sheetUrl) {
-            return NextResponse.json({ ok: false, error: "No sheet URL provided" });
-        }
-
-        if (!payload) {
+        if (!rawPayload) {
             return NextResponse.json({ ok: false, error: "No payload provided" });
         }
+
+        // 2. Convert raw JSON → class instance
+        const appendPayload = new AppendPayload({
+            userInfo: rawPayload.userInfo,
+            agency: rawPayload.agency,
+            state: rawPayload.state,
+            dateRequested: rawPayload.dateRequested,
+            requestText: rawPayload.requestText,
+        });
+
+
+        const sheetUrl = appendPayload.sheet_url();
 
         // Extract spreadsheet ID from URL
         const match = sheetUrl.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);
@@ -62,12 +59,14 @@ export async function POST(req: NextRequest) {
 
         let sheet = doc.sheetsByIndex[0];
 
+        const sheetName = appendPayload.sheet();
+
         // Get the first sheet (or specify by title/index)
-        if (payload.sheet_name != "") {
-            sheet = doc.sheetsByTitle[payload.sheet_name];
+        if (sheetName != "") {
+            sheet = doc.sheetsByTitle[sheetName];
             if (!sheet) {
                 // Create the sheet if it doesn't exist
-                sheet = await doc.addSheet({ title: payload.sheet_name });
+                sheet = await doc.addSheet({ title: sheetName });
             }
         }
 
@@ -75,23 +74,16 @@ export async function POST(req: NextRequest) {
         await sheet.loadCells('A1:E1');
         const firstRowHasData = sheet.getCell(0, 0).value !== null && sheet.getCell(0, 0).value !== '';
 
-        const expectedHeaders = ['Requester Name', 'Agency Name', 'Agency System', 'Date Requested', 'Request Text'];
-
+        const possibleHeaders = appendPayload.headers();
         if (!firstRowHasData) {
-            await sheet.setHeaderRow(expectedHeaders);
+            await sheet.setHeaderRow(possibleHeaders);
         } else {
             // Headers exist, load them
             await sheet.loadHeaderRow();
         }
 
         // Append the row
-        await sheet.addRow({
-            'Requester Name': payload.requester_name,
-            'Agency Name': payload.agency_name,
-            'Agency System': payload.agency_system,
-            'Date Requested': payload.date_requested,
-            'Request Text': payload.request_text,
-        });
+        await sheet.addRow(appendPayload.to_dict());
 
         return NextResponse.json({
             ok: true,

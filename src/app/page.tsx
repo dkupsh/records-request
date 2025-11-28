@@ -146,9 +146,13 @@ export default function HomePage() {
 		);
 
 		if (isSheetSet) {
+			const currentAgency = selectedAgencies[currentAgencyIndex];
+			const currentState = getStateForAgency(currentAgency, stateInfo);
+
 			await appendToSheet(
 				userInfo,
-				selectedAgencies[currentAgencyIndex],
+				currentState,
+				currentAgency,
 				formattedRequestText
 			);
 		}
