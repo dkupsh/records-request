@@ -40,8 +40,10 @@ const SendHome: React.FC<SendHomeProps> = ({
 }) => {
 	const [showModal, setShowModal] = useState(false);
 
+	const isCurrentAgencySent = sentAgencies.includes(currentAgencyIndex);
+
 	const handleSend = () => {
-		if (sentAgencies.includes(currentAgencyIndex)) {
+		if (isCurrentAgencySent) {
 			setShowModal(true);
 		} else {
 			sendRequest();
@@ -86,6 +88,9 @@ const SendHome: React.FC<SendHomeProps> = ({
 	const cancelSend = () => {
 		setShowModal(false);
 	};
+
+	const sendText = isEmail ? "Send" : "Open";
+	const buttonColor = isCurrentAgencySent ? colors.red : colors.blue;
 
 	return (
 		<Container fluid>
@@ -146,6 +151,24 @@ const SendHome: React.FC<SendHomeProps> = ({
 						handleSend={handleSend}
 					/>
 				)}
+			</Row>
+			<Row
+				style={{
+					display: "flex",
+					justifyContent: "center", // centers horizontally
+				}}
+			>
+				<Button
+					variant="primary"
+					type="button"
+					onClick={handleSend}
+					style={{
+						width: "60%", // button width
+						backgroundColor: buttonColor,
+					}}
+				>
+					{sendText}
+				</Button>
 			</Row>
 			<Modal show={showModal} onHide={cancelSend} centered>
 				<Modal.Header closeButton>

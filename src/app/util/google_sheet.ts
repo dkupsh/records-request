@@ -2,8 +2,6 @@
 import { Agency, UserInfo, State, user_placeholders, agency_placeholders, state_placeholders } from "@/app/util/agency_util";
 
 
-
-
 export class AppendPayload {
   userInfo: UserInfo;
   agency: Agency;
