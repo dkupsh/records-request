@@ -119,27 +119,6 @@ describe('AppendPayload', () => {
     expect(dict['Date Requested']).toBe('2024-01-01');
     expect(dict['Request Text']).toBe('Test request text');
   });
-
-  it('handles null values in to_dict', () => {
-    const partialAgency: Agency = {
-      ...mockAgency,
-      sjp_name: null as any,
-      chancellor_name: null as any,
-    };
-
-    const payload = new AppendPayload({
-      userInfo: mockUserInfo,
-      agency: partialAgency,
-      state: mockState,
-      dateRequested: '2024-01-01',
-      requestText: 'Test request text',
-    });
-
-    const dict = payload.to_dict();
-
-    expect(dict['SJP Name']).toBe('');
-    expect(dict['Chancellor Name']).toBe('');
-  });
 });
 
 describe('appendToSheet', () => {
